@@ -1,0 +1,24 @@
+#img{
+    width: 200px;
+
+}
+.container{
+  
+    text-align: center;
+    justify-content: space-around;
+  
+
+   
+}
+.card{
+    margin:2rem;
+}
+
+@media (min-width:600px) {
+    .contenedor{
+        display:flex;
+        
+
+    }
+    
+}

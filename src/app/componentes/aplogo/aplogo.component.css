@@ -1,0 +1,43 @@
+
+
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+    
+
+}
+
+
+#logoap{
+    width: 150px;
+}
+
+.nav-link{
+    font-size: 20px;
+    color:#fefefe;
+    border-radius: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-link:hover{
+    background-color:rgb(17, 226, 241) ;
+}
+.redes{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.redes img{
+    width: 4rem;    
+    padding-left: .6rem;
+    padding-right: .6rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.redes img:hover{
+    background-color:rgb(17, 226, 241) ;
+
+}
