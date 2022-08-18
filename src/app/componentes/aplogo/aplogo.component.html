@@ -1,40 +1,46 @@
-<nav class="navbar navbar-expand-sm fixed-top" style="background-color: rgb(17, 148, 235);;">
-  <div class="container-fluid">
-    <a class="navbar-brand" data-bs-toggle="collapse" href=#inicio><img src="../../../assets/APLogo.png" alt="logoap"
-        id="logoap"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(17, 148, 235);;">
+      <div class="container-fluid">
+        <a class="navbar-brand"  href="#home"><img src="../../../assets/APLogo.png" alt="logoap"
+            id="logoap"></a>
+            <button class="navbar-toggler" type="button"
+            aria-label="Toggle navigation" (click)="ontoggle()">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         
+         <div [ngClass]="{'collapse':toggle}" class = "navbar-collapse">
+          
+          <ul class="navbar-nav">
     
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link" href="#sobremi">SobreMi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experiencia">Experiencia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#educacion">Educacion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#proyectos">Proyectos</a>
-        </li>
-
-
-      </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobremi" (click)="ontoggle()">SobreMi  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia" (click)="ontoggle()">Experiencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#educacion" (click)="ontoggle()" >Educacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" (click)="ontoggle()" >Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos" (click)="ontoggle()"  >Proyectos</a>
+            </li>
+    
+    
+          </ul>
+          
+        </div>
+        <div class="redes">
+          <button type="button" class="btn btn-outline-light">INGRESO</button>
+          <img src="../../../assets/github.png">
+          <img src="../../../assets/linkedin.png">
       
-    </div>
-    <div class="redes">
-      <button type="button" class="btn btn-outline-light">INGRESO</button>
-      <img src="../../../assets/github.png">
-      <img src="../../../assets/linkedin.png">
-  
-  
-    </div>
+      
+        </div>
+        </div>
+        </nav>
+    
     

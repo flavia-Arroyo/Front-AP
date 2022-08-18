@@ -1,7 +1,10 @@
 /*estilo foto perfil*/
 .row{
     background-color: azure;
+    
+   
 }
+
 
 
 #fotodeperfil{
@@ -10,8 +13,10 @@
     
    
 }
-#sobremi{
+#sobremip{
     border-style: inset;
+    margin-top: 150px;
+   
   
     
     
