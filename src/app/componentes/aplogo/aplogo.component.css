@@ -41,3 +41,15 @@
     background-color:rgb(17, 226, 241) ;
 
 }
+
+.modal-header{
+    display: flex;
+    flex-direction: column;
+}
+.form-label{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+}
