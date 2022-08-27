@@ -19,6 +19,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { interceptorProvider } from './service/interceptor-service';
     ProyectosComponent,
     FooterComponent,
     HomeComponent
+  
    
   ],
   imports: [

@@ -5,6 +5,6 @@ export class LoginUsuario {
     constructor(nombreUsuario:string, password:string){
         this.nombreUsuario = nombreUsuario;
         this.password = password;
-        console.log(nombreUsuario, password)
+        
     }
 }

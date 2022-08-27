@@ -2,23 +2,97 @@
 <div class="container">
   <p class="text-center fs-1 fw-bold">Experiencia
   </p>
+  <button type="button" class="btn btn-warning boton" (click)="openVentana()" *ngIf="isLogged">Nueva
+    Experiencia</button>
   <div class="row g-2">
-    <div class="col-12 col-md-6 col-lg-6"id="card" >
-      <img src="../../../assets/bm.jpg" class="card-img-top"  id="img"alt="...">
+    <div class="col-12 col-md-6 col-lg-6" id="card" *ngFor="let Experiencia of expe">
+      <img [src]="Experiencia.img" class="card-img-top" id="img" alt="...">
       <div class="card-body">
-          <p class="fs-4 text-center fw-bold">Biblioteca Mayor-UNC</p>
-        <p class="card-text">Supervisora Administrativa Departamentos Contable y Recursos Humanos-Biblioteca Mayor-UNC</p>
+        <p class="fs-4 text-center fw-bold">{{Experiencia.nombreE}}</p>
+        <p class="card-text">{{Experiencia.descripcionE}}</p>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-6"  id="card">
-      <img src="../../../assets/coined.jpg" class="card-img-top"  id="img"alt="...">
-      <div class="card-body">
-          <p class="fs-4 text-center fw-bold">COINED</p>
-        <p class="card-text">Responsable control de proveedores</p>
-      </div>
+    <!--<button (click)="delete(Experiencia.id)"><i class="bi bi-pencil-fill"></i></button>-->
+    <div class="edicion" *ngIf="isLogged">
+      
     </div>
-
-
   </div>
-    
+
+</div>
+
+<div class="modal fade" id="ventanaexperiencia">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">INGRESAR EXPERIENCIA</h5>
+        <img src="">
+      </div>
+      <div class="modal-body">
+        <H1>AGREGAR EXPERIENCIA</H1>
+        <form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+          <div class="col-12 ">
+            <label for="iempresa" class="form-label">URL DEL LOGO EMPRESA</label>
+            <input type="text" class="form-control" id="iempresa" name="iempresa" [(ngModel)]="img" required>
+
+          </div>
+          <div class="col-12 ">
+            <label for="Nempresa" class="form-label">NOMBRE EMPRESA</label>
+            <input type="text" class="form-control" id="Nempresa" name="Nempresa" [(ngModel)]="nombreE" required>
+          </div>
+          <div class="col-12 ">
+            <label for="Tempresa" class="form-label">TAREA REALIZADA</label>
+            <input type="text" class="form-control" id="Tempresa" name="Tempresa" [(ngModel)]="descripcionE" required>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-succes" (click)="onCreate()">AGREGAR</button>
+            <button type="button" class="btn btn-danger" (click)="exitModal()">CANCELAR</button>
+
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="ventanaedicion" *ngIf="expLab">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">EDITAR EXPERIENCIA</h5>
+        <img src="">
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onUpdate(expLab.id)" #f="ngForm" novalidate>
+          <div class="col-12 ">
+            <label for="iempresa" class="form-label">URL DEL LOGO EMPRESA</label>
+            <input type="text" class="form-control" id="iempresa" name="iempresa" [(ngModel)]="expLab.img" required>
+
+          </div>
+          <div class="col-12 ">
+            <label for="Nempresa" class="form-label">NOMBRE EMPRESA</label>
+            <input type="text" class="form-control" id="Nempresa" name="Nempresa" [(ngModel)]="expLab.nombreE" required>
+          </div>
+          <div class="col-12 ">
+            <label for="Tempresa" class="form-label">TAREA REALIZADA</label>
+            <input type="text" class="form-control" id="Tempresa" name="Tempresa" [(ngModel)]="expLab.descripcionE"
+              required>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-primary"  >EDITAREXPERIENCIA</button>
+
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
 </div>

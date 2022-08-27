@@ -15,7 +15,7 @@ export class SobremiComponent implements OnInit {
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data =>{
       this.persona = data
-      console.log(data.img)
+      
       
     })
   }

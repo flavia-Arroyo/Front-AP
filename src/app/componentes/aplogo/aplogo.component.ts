@@ -61,9 +61,12 @@ export class AplogoComponent implements OnInit {
 
 
   onLogin(): void {
+    /*var dato;*/
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     
     this.authService.login(this.loginUsuario).subscribe(data =>{ 
+      /*this.formModal.hide()
+      dato = data*/
       
       this.isLogged = true;     
       this.isLogginFail = false;
@@ -79,11 +82,13 @@ export class AplogoComponent implements OnInit {
       this.errMsj = err.error.mensaje;
       console.log(this.errMsj)
     })
+  }
+  /*console.log(dato)*/
     
  
  
   
-}
+
 
 
 
