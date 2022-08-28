@@ -20,7 +20,7 @@ export class SExperienciaService {
   }
 
   public detail(id:number):Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.expUrl + `detail/$id`)
+    return this.httpClient.get<Experiencia>(this.expUrl + `detail/${id}`)
   }
   public save(experiencia:Experiencia):Observable<any>{
     return this.httpClient.post<any>(this.expUrl + 'create', experiencia);

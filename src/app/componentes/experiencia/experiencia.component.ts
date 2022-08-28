@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
+
 
 declare var window: any;
 
@@ -20,15 +22,14 @@ export class ExperienciaComponent implements OnInit {
 
   expe: Experiencia[] = [];
   //Para cargar exp
-  
-  img:string='';
-  nombreE:string='';
-  descripcionE:string='';
 
-  //para edicion
-  expLab: Experiencia = null;
-  
-  
+  img: string = '';
+  nombreE: string = '';
+  descripcionE: string = '';
+
+
+
+
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
@@ -37,12 +38,12 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
     this.formModal = new window.bootstrap.Modal(
       document.getElementById("ventanaexperiencia"),
-      
+
 
     )
-    
-    
-  
+
+
+
 
 
     this.cargarExperiencia();
@@ -54,65 +55,86 @@ export class ExperienciaComponent implements OnInit {
   }
 
   cargarExperiencia(): void {
-    this.sExperiencia.lista().subscribe(data => { 
+    this.sExperiencia.lista().subscribe(data => {
       this.expe = data;
-      
+
       console.log(data)
-     })
- 
+    })
+
   }
 
-  delete(id?: number){
+  delete(id?: number) {
 
-    if(id != undefined){
-      this.sExperiencia.delete(id).subscribe(
-        data => {
-          this.cargarExperiencia();
-        }, err => {
-          alert("No se pudo borrar la experiencia");
-        }
-      )
+    if (id != undefined) {
+      Swal.fire({
+        title: 'Esta Seguro',
+        text: 'Esta accion es irreversible',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: "SI, BORRAR"
+      }).then(result => {
+        if (result.value) {
+          this.sExperiencia.delete(id).subscribe(
+            data => {
+              this.cargarExperiencia();
+              Swal.fire('BORRADO', 'Experiencia ha sido eliminada', 'success')
+            }, err => {
+              Swal.fire({
+                icon: 'error',
+                
+                text: 'No se pudo borrar la experiencia!',
+                
+              })
+             
+            } )    
+          }
+      })
     }
   }
-  
-  
-  //editar experiencia
-  onUpdate(id?: number){
-   
-    if(id != undefined){
-      this.sExperiencia.update(id, this.expLab).subscribe(
-        data => {
-          alert("La experiencia se modifico");
-          
-        }, err => {
-          alert("No se pudo borrar la experiencia");
-        }
-      )
-    }
-  }
 
-  openVentana(){
+
+
+
+
+  openVentana() {
     this.formModal.show();
   }
 
-  
 
-  onCreate():void{
+
+  onCreate(): void {
     const expe = new Experiencia(this.img, this.nombreE, this.descripcionE)
     this.sExperiencia.save(expe).subscribe(
-      data=>{
-        
-        alert("Experiencia añadida")
-      },err =>{
-        alert("fallo")
+      data => {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Experiencia añadida',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
+      }, err => {
+        Swal.fire({
+          icon: 'error',
+          
+          text: 'No se pudo añadir experiencia!',
+          
+        })
 
       }
     )
   }
-  exitModal(){
+  exitModal() {
     this.formModal.hide()
 
   }
- 
+
+
+
+
+
 
 }

@@ -17,6 +17,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
+import {  EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 
 
 
@@ -32,7 +33,9 @@ import { interceptorProvider } from './service/interceptor-service';
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+   
+    EditExperienciaComponent
   
    
   ],
