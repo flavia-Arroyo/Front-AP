@@ -1,96 +1,40 @@
 <a id="skills"></a>
+
 <div class="container">
-    <div class="row">
-        <p class="text-center fs-1 fw-bold">Skills
-        </p>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4 ">
-            <circle-progress [percent]="90" [radius]="100" [imageSrc]="'../assets/html.png'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
+    <p class="text-center fs-1 fw-bold border-booton">Skills</p> 
+    <a type="button" class="btn btn-warning boton"   routerLink="/nuevaskil" *ngIf="isLogged">Nueva
+        Skill</a> 
+
+    <div class="row ">
+        <div  class="col-12 col-sm-6 col-lg-3 caja   p-5 " *ngFor="let Skill of ski">
+            <div class="titulo">
+                <div>
+                    <h4>{{Skill.nombreS}}</h4>
+                </div>
+                <div class="edicion" *ngIf="isLogged">
+                    <button class="editar btn " routerLink="/editskil/{{Skill.id}}" ><i
+                            class="bi bi-pencil-fill"></i></button>
+                    <button class="borrar btn " (click)="delete(Skill.id)"><i class="bi bi-trash3"></i></button>
+                </div>
+
+            </div>  
+            <circle-progress 
+                [percent]="Skill.porcentajeS" 
+                [radius]="100" 
+                [imageSrc]='Skill.imgS' 
+                [showImage]="true"
+                [imageHeight]="80"
+                 [imageWidth]="80" 
+                 [showSubtitle]="false" 
+                 [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8" 
+                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'"
+                 [animation]="true"
+                [animationDuration]="600">
             </circle-progress>
         </div>
 
-        <div text-center class="col-sm-4 col-md-4 col-lg-4 ">
-            <circle-progress [percent]="70" [radius]="100" [imageSrc]="'../assets/git.png'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="80" [radius]="100" [imageSrc]="'../assets/CSS.png'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="75" [radius]="100" [imageSrc]="'../assets/js.png'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="40" [radius]="100" [imageSrc]="'../assets/java.jpg'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="40" [radius]="100" [imageSrc]="'../assets/python.png'" [showImage]="true"
-                [imageHeight]="80" [imageWidth]="80" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4 ">
-            <circle-progress [percent]="40" [radius]="100" [imageSrc]="'../assets/eng.png'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4 ">
-            <circle-progress [percent]="100" [radius]="100" [imageSrc]="'../assets/grupal.png'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="100" [radius]="100" [imageSrc]="'../assets/habilcom.png'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="70" [radius]="100" [imageSrc]="'../assets/leanstartup.png'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="60" [radius]="100" [imageSrc]="'../assets/bmc.jpg'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-        </div>
-        <div text-center class="col-sm-4 col-md-4 col-lg-4">
-            <circle-progress [percent]="70" [radius]="100" [imageSrc]="'../assets/euipos_agiles.png'" [showImage]="true"
-                [imageHeight]="90" [imageWidth]="90" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
-            </circle-progress>
-
-
-
-
-
-        </div>
+        
 
     </div>
 </div>

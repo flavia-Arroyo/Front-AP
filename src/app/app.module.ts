@@ -19,6 +19,11 @@ import { HomeComponent } from './componentes/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
 import {  EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { NewSkillsComponent } from './componentes/skills/new-skills.component';
+import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
+
 
 
 @NgModule({
@@ -33,9 +38,12 @@ import {  EditExperienciaComponent } from './componentes/experiencia/edit-experi
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
-    HomeComponent,
-   
-    EditExperienciaComponent
+    HomeComponent,   
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewSkillsComponent,
+    EditSkillsComponent
   
    
   ],

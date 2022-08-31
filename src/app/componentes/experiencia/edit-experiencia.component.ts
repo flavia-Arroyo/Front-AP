@@ -38,12 +38,23 @@ export class EditExperienciaComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
       data =>{
+        Swal.fire({
+          
+
+          position: 'center',
+          icon: 'success',
+          title: 'Educacion actualizada',
+          showConfirmButton: false,
+          timer: 1500,
+          
+
+        })
         this.router.navigate(['']);
       }, err=>{
         Swal.fire({
           icon: 'error',
           
-          text: 'No se pudo crear experiencia!',
+          text: 'No se pudo modificar experiencia!',
           
         })
         

@@ -4,57 +4,29 @@
 <div class="container">
   <p class="text-center fs-1 fw-bold border-booton">Educacion
   </p>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <img src="../../../assets/aluralatam.png" class="card-img-top" id="img" alt="...">
-        <div class="card-body">
-          <h5 class="fs-4 text-center fw-bold">Curso Front-End y Back-End(2022)</h5>
-          <p class="card-text">Principiante en Programacion-Frond-End-Java Orientado a Objetos</p>
+  <a type="button" class="btn btn-warning boton"   routerLink="/nuevaedu" *ngIf="isLogged">Nueva
+    Educacion</a>
+  
+    <div class="row g-2">
+      <div class="col-12 col-md-6 col-lg-4 borde"  *ngFor="let Educacion of edu">
+
+        <div class="edicion" *ngIf="isLogged">
+          <button class="editar btn " routerLink="/editedu/{{Educacion.id}}"  ><i class="bi bi-pencil-fill"></i></button>
+          <button class="borrar btn "(click)="delete(Educacion.id)"><i class="bi bi-trash3"></i></button>
         </div>
-        
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <img src="../../../assets/argentinaprograma.jpg" class="card-img-top" id="img" alt="...">
+
+        <img [src]="Educacion.imgE" class="card-img-top" id="img" alt="...">
         <div class="card-body">
-          <h5 class="fs-4 text-center fw-bold">Se programar(2022)</h5>
-          <p class="card-text">Principiante en Programacion</p>
+          <h5 class="fs-4 text-center fw-bold">{{Educacion.institucionE}}-{{Educacion.anioE}}</h5>
+          <p class="card-text">{{Educacion.tituloE}}s</p>
+          <p class="card-text">{{Educacion.condicionE}}s</p>
+
         </div>
-        
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <img src="../../../assets/uea.jpg" class="card-img-top" id="img" alt="...">
-        <div class="card-body">
-          <h5 class="fs-4 text-center fw-bold">Universidad Europea del Atlántico(2022)</h5>
-          <p class="card-text">Magister en Recursos Humanos y Gestión del Conocimiento</p>
-        </div>
-        
       </div>
     </div>
-    <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-4">
-          <img src="../../../assets/conosur.jpg" class="card-img-top" id="img" alt="...">
-          <div class="card-body">
-            <h5 class="fs-4 text-center fw-bold">Conosur(2022)</h5>
-            <p class="card-text">Principiante en Programacion</p>
-          </div>
-          
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <img src="../../../assets/univ21.jpg" class="card-img-top" id="img" alt="...">
-          <div class="card-body">
-            <h5 class="fs-4 text-center fw-bold">Universidad Siglo 21</h5>
-            <p class="card-text">Diplomatura Ejercicio Profesional</p>
-          </div>
-          
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <img src="../../../assets/unc.png" class="card-img-top" id="img" alt="...">
-          <div class="card-body">
-            <h5 class="fs-4 text-center fw-bold">Universidad Nacional de Cordoba(2012)</h5>
-            <p class="card-text">Contadora Pública</p>
-          </div>
-          
-        </div>
-      </div>
+        
+      
    
 </div>
+
+

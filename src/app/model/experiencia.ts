@@ -4,10 +4,11 @@ export class Experiencia {
     nombreE :string;
     descripcionE: string;
    
-    constructor(nombreE:string , descripcionE:string, img :string){
+    constructor(img :string, nombreE:string, descripcionE:string){
+        
+        this.img= img;
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
-        this.img= img;
         console.log(nombreE, descripcionE,img, this.id)
 
 

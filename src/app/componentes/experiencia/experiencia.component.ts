@@ -18,7 +18,7 @@ export class ExperienciaComponent implements OnInit {
   toggle: boolean = true;
   title = 'ang13-bootstrap5-modal-demo';
   formModal: any;
-  formModal2: any;
+  
 
   expe: Experiencia[] = [];
   //Para cargar exp
@@ -38,13 +38,7 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
     this.formModal = new window.bootstrap.Modal(
       document.getElementById("ventanaexperiencia"),
-
-
     )
-
-
-
-
 
     this.cargarExperiencia();
     if (this.tokenService.getToken()) {
@@ -108,12 +102,15 @@ export class ExperienciaComponent implements OnInit {
     const expe = new Experiencia(this.img, this.nombreE, this.descripcionE)
     this.sExperiencia.save(expe).subscribe(
       data => {
+        this.exitModal()
         Swal.fire({
+          
           position: 'center',
           icon: 'success',
           title: 'Experiencia añadida',
           showConfirmButton: false,
           timer: 1500
+          
         })
 
       }, err => {
