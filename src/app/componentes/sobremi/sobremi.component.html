@@ -1,24 +1,27 @@
 <a name="sobremi" id="sobremi"></a>
-    <div class="row persona" >
-        <button class="editar btn mx-2" *ngIf="isLogged" routerLink="/editper/{{persona.id}}"><i
-            class="bi bi-pencil-fill"></i>EDITAR</button>
-        <div class="col-xs-12 col-sm-5 col-lg-3 ">
-            <img [src]="persona.img" class="img-fluid" id="fotodeperfil">
-        </div>
-        <div class="col-xs-12 col-sm-7 col-lg-9">
-            <p class="fs-1 text-center fw-bold">{{persona.nombre}}-{{persona.apellido}}</p>
-            <p class="fs-4 text-center fw-bold">{{persona.titulo}}</p>
-            <p class= "fs-4 text-center fw-bold" >{{persona.localidad}}</p>
-        </div>
-    
+<div class="row persona">
+    <button class="editar btn mx-2" *ngIf="isLogged" routerLink="/editper/{{persona.id}}"><i
+            class="bi bi-pencil-fill"></i>EDITAR PERSONA</button>
+    <div class="col-xs-12 col-sm-5 col-lg-3 ">
+        
+
+        <img [src]="persona.img" class="img-fluid" id="fotodeperfil">
     </div>
-   
-   
-    <div class="col-12 "  id="sobremip" >
-        <p class="text-center fs-1 fw-bold">Sobre Mi</p>
-        <p class=" fs-5 text-center " >{{persona.sobremi}}</p>
-
-
+    <div class="col-xs-12 col-sm-7 col-lg-9">
+        <p class="fs-1 text-center fw-bold">{{persona.nombre}}-{{persona.apellido}}</p>
+        <p class="fs-4 text-center fw-bold">{{persona.titulo}}</p>
+        <p class="fs-4 text-center fw-bold">{{persona.localidad}}</p>
     </div>
 
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-8 p-5 text-center " id="sobremip">
+        <p class=" fs-1 fw-bold">Sobre Mi</p>
+        <h3 class=" fs-5 text-center ">{{persona.sobremi}}</h3>
+
+
+    </div>
+
+</div>
 

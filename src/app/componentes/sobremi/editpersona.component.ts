@@ -18,7 +18,9 @@ export class EditpersonaComponent implements OnInit {
 
   ngOnInit(): void {
     const id=this.activateRouter.snapshot.params['id'];
+    console.log(id)
     this.personaS.detail(id).subscribe(
+      
       data=>{
         this.Persona=data
       },err=>{
@@ -35,13 +37,14 @@ export class EditpersonaComponent implements OnInit {
   }
   onUpdate():void{
     const id= this.activateRouter.snapshot.params['id'];
+    console.log(id)
     this.personaS.editPersona(id, this.Persona).subscribe(
       data=>{
         Swal.fire({   
 
           position: 'center',
           icon: 'success',
-          title: 'Persona Actualizado',
+          title: 'Persona Actualizada',
           showConfirmButton: false,
           timer: 1500,
           

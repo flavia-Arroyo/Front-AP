@@ -10,9 +10,12 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class SobremiComponent implements OnInit {
   persona: persona = new persona("","","","","","");
+ 
 
   constructor(public personaService:PersonaService, private tokenService: TokenService) { }
   isLogged = false;
+  
+
   ngOnInit(): void {
     this.cargarPersona();
     if(this.tokenService.getToken()){
@@ -20,12 +23,21 @@ export class SobremiComponent implements OnInit {
     }else{
       this.isLogged=false
     }
+
+    
+
+
+
   }
+
+  
+  
 
 
     cargarPersona():void{
       this.personaService.getPersona().subscribe(data =>{
         this.persona = data
+        console.log(data)
         
         
       })
