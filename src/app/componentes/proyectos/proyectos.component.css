@@ -1,18 +1,42 @@
-.parte1, .parte2{
-    display: inline-block;
-    text-align: justify;
-    padding-bottom: 1rem;
+.redes {
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+
+.imgproyecto {
+    box-shadow: 10px 10px 30px #000000;
 
 }
-.imgproyecto{
-    box-shadow: 10px 10px 30px #000000;
-    
+.detalles{
+    text-align: left;
 }
-.container{
+
+.proyecto:hover{
+    color:rgb(36, 208, 211);
+}
+
+.boton {
+    margin-bottom: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.container {
     margin-top: 110px;
+    text-align: center;
 }
-@media screen and (max-width:980px){
-    .container{
+
+@media screen and (max-width:980px) {
+    .container {
         margin-top: 160px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .redes {
+        text-align: left;
     }
 }

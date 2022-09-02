@@ -23,6 +23,9 @@ import { NewEducacionComponent } from './componentes/educacion/new-educacion.com
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditpersonaComponent } from './componentes/sobremi/editpersona.component';
 
 
 
@@ -43,7 +46,10 @@ import { EditSkillsComponent } from './componentes/skills/edit-skills.component'
     NewEducacionComponent,
     EditEducacionComponent,
     NewSkillsComponent,
-    EditSkillsComponent
+    EditSkillsComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
+    EditpersonaComponent
   
    
   ],

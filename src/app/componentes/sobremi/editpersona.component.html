@@ -1,0 +1,45 @@
+<div class="container " >
+    <div class="row">
+      <div>
+        <h4> ADITAR DATOS DE LA PERSONA</h4>
+        <form #f="ngForm" novalidate>
+          <img [src]="Persona.img" style="width: 200px;"class="card-img-top" id="img" alt="...">
+          <div class="form-group">         
+  
+            <label for="img">URL IMAGEN </label>
+            <input type="text" class="form-control" name="img" [(ngModel)]="Persona.img" required>
+          </div>
+          <div class="form-group">
+            <label for="nombreP">NOMBRE </label>
+            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="Persona.nombre"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="descp">APELLIDO</label>
+            <textarea type="text" class="form-control" id="descp" name="descp" [(ngModel)]="Persona.apellido" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="paginap">TITULO</label>
+            <input type="text" class="form-control" id="paginap" name="paginap" [(ngModel)]="Persona.titulo" required>
+          </div>
+          <div class="form-group">
+            <label for="anioE">LOCALIDAD</label>
+            <input type="text" class="form-control" id="anioE" name="anioE" [(ngModel)]="Persona.localidad" required>
+          </div>
+          <div class="form-group">
+            <label for="anioE">SECCION SOBRE MI </label>
+            <textarea type="text" class="form-control" id="anioE" name="anioE" [(ngModel)]="Persona.sobremi" required></textarea>
+          </div>
+  
+          <button class="btn btn-success" (click)="onUpdate()">
+            EDITAR
+          </button>
+          <button (click)="cancelar()" class="btn btn-dark">
+            CANCELAR
+          </button>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+

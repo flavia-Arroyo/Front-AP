@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
-export class EducacionComponent implements OnInit { 
+export class EducacionComponent implements OnInit {
   edu: Educacion[] = [];
   constructor(private sEducacion: EducacionService, private tokenService: TokenService) { }
 
@@ -51,12 +51,12 @@ export class EducacionComponent implements OnInit {
           this.sEducacion.delete(id).subscribe(
             data => {
               this.cargarEducacion();
-              Swal.fire('BORRADO', 'Experiencia ha sido eliminada', 'success')
+              Swal.fire('BORRADO', 'Educacion ha sido eliminada', 'success')
             }, err => {
               Swal.fire({
                 icon: 'error',
 
-                text: 'No se pudo borrar la experiencia!',
+                text: 'No se pudo borrar la educacion!',
 
               })
 
@@ -66,14 +66,14 @@ export class EducacionComponent implements OnInit {
     }
   }
 
-  
 
 
- 
-    
-  }
-  
- 
+
+
+
+}
+
+
 
 
 

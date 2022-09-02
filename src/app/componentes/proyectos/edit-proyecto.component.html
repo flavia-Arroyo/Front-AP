@@ -1,0 +1,40 @@
+<div class="container " *ngIf="proyecto">
+    <div class="row">
+      <div>
+        <h4> ACTUALIZAR PROYECTO</h4>
+        <form #f="ngForm" novalidate>
+          <img [src]="proyecto.imgP" style="width: 200px;"class="card-img-top" id="img" alt="...">
+          <div class="form-group">         
+  
+            <label for="img">URL IMAGEN PROYECTO</label>
+            <input type="text" class="form-control"  name="img" [(ngModel)]="proyecto.imgP" required>
+          </div>
+          <div class="form-group">
+            <label for="nombreP">NOMBRE PROYECTO</label>
+            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="descp">DESCRIPCION PROYECTO</label>
+            <textarea type="text" class="form-control" id="descp" name="descp" [(ngModel)]="proyecto.descripcionP" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="paginap">URL PAGINA PROYECTO</label>
+            <input type="text" class="form-control" id="paginap" name="paginap" [(ngModel)]="proyecto.paginaP" required>
+          </div>
+          <div class="form-group">
+            <label for="anioE">URL REPOSITORIO GITHUB  </label>
+            <input type="text" class="form-control" id="anioE" name="anioE" [(ngModel)]="proyecto.repositorioP" required>
+          </div>
+  
+          <button class="btn btn-success" (click)="onUpdate()">
+            EDITAR
+          </button>
+          <button (click)="cancelar()" class="btn btn-dark">
+            CANCELAR
+          </button>
+  
+        </form>
+      </div>
+    </div>
+  </div>

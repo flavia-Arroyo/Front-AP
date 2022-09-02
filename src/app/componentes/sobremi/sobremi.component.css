@@ -4,18 +4,25 @@
     
    
 }
+.persona{
+    margin-top: 120px;
+}
 
 
 
 #fotodeperfil{
+    position: absolute;
     box-shadow: 10px 10px  15px #545050;
+    width: 300px;
+    top:380px;
     border-radius: 90%;
     
    
 }
 #sobremip{
     border-style: inset;
-    margin-top: 150px;
+    margin-top: 90px;
+    
    
   
     
@@ -38,7 +45,7 @@
 @media (min-width:700px){
     #fotodeperfil{
         
-        position: absolute;
+        
         top:600px;
       
         
