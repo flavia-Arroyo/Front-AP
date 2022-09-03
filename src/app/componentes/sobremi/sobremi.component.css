@@ -4,8 +4,16 @@
     
    
 }
+.boton{
+    margin-bottom: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+}
 .persona{
     margin-top: 120px;
+    display: flex;
+    justify-content: end;
 }
 
 

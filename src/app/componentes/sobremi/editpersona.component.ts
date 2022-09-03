@@ -10,7 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./editpersona.component.css']
 })
 export class EditpersonaComponent implements OnInit {
-  Persona: persona = null;
+  Persona: persona = new persona("","","","","","");
+  
 
 
 
@@ -20,7 +21,9 @@ export class EditpersonaComponent implements OnInit {
     const id=this.activateRouter.snapshot.params['id'];
     console.log(id)
     console.log(persona)
+
     this.personaS.getPersona().subscribe(
+      
       
       data=>{
         this.Persona=data;
@@ -38,6 +41,7 @@ export class EditpersonaComponent implements OnInit {
     )
   }
   onUpdate():void{
+    
     const id= this.activateRouter.snapshot.params['id'];
     console.log(id)
   
