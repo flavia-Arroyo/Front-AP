@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class SobremiComponent implements OnInit {
   persona: persona = new persona("","","","","","");
  
+ 
 
   constructor(public personaService:PersonaService, private tokenService: TokenService) { }
   isLogged = false;
@@ -30,7 +31,6 @@ export class SobremiComponent implements OnInit {
 
   }
 
-  
   
 
 

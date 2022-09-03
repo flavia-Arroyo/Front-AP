@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./editpersona.component.css']
 })
 export class EditpersonaComponent implements OnInit {
-  Persona:persona=null;
+  Persona: persona = null;
 
 
 
@@ -19,10 +19,12 @@ export class EditpersonaComponent implements OnInit {
   ngOnInit(): void {
     const id=this.activateRouter.snapshot.params['id'];
     console.log(id)
-    this.personaS.detail(id).subscribe(
+    console.log(persona)
+    this.personaS.getPersona().subscribe(
       
       data=>{
-        this.Persona=data
+        this.Persona=data;
+        console.log(data)
       },err=>{
         Swal.fire({
           icon: 'error',
@@ -38,6 +40,7 @@ export class EditpersonaComponent implements OnInit {
   onUpdate():void{
     const id= this.activateRouter.snapshot.params['id'];
     console.log(id)
+  
     this.personaS.editPersona(id, this.Persona).subscribe(
       data=>{
         Swal.fire({   

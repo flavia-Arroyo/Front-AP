@@ -18,19 +18,13 @@ export class PersonaService {
     
         
   }
-  public detail(id:number):Observable<persona>{
-    return this.httpClient.get<persona>(this.URL+ `detail/${id}`);
-  }
-
-  public save(Persona:persona):Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'crear', Persona);
-
-  }
+  
 
 
 
 
-  public editPersona(id:number, Persona:persona):Observable<any>{
+
+  public editPersona(id:number, Persona:persona) :Observable<any>{
     return this.httpClient.put<any>(this.URL + `editar/${id}`,Persona)
   }
 
