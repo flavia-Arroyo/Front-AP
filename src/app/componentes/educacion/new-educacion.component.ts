@@ -27,8 +27,6 @@ export class NewEducacionComponent implements OnInit {
     this.sEducacion.save(expe).subscribe(
       data => {
         Swal.fire({
-          
-
           position: 'center',
           icon: 'success',
           title: 'Educacion añadida',
@@ -42,7 +40,6 @@ export class NewEducacionComponent implements OnInit {
       }, err => {
         Swal.fire({
           icon: 'error',
-
           text: 'No se pudo añadir educacion!',
 
         })

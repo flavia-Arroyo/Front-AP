@@ -6,11 +6,29 @@
     align-items: center;
 }
 
-.banner img{
-    width: 100vw;
-    height: 50vh;
-
+.edicion{
+    position: absolute;
+    top:0;
 }
+.edicion a{
+    color:black;
+    cursor: pointer;
+}
+ 
+.boton{
+    margin-right: 2rem;
+}
+.contenedor{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
 
 
 #logoap{
@@ -32,22 +50,18 @@
     display: flex;
     justify-content: flex-end;
 }
-.redes img{
-    width: 4rem;    
-    padding-left: .6rem;
-    padding-right: .6rem;
+.imgRedes img{
+    width: 2rem;  
+    height: 2rem;      
     border-radius: 50px;
     cursor: pointer;
 }
-.redes img:hover{
+.imgRedes img:hover{
     background-color:rgb(17, 226, 241) ;
 
 }
 
-.modal-header{
-    display: flex;
-    flex-direction: column;
-}
+
 .form-label{
     width: 100%;
     font-size: 20px;

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './componentes/header/header.component';
 import { AplogoComponent } from './componentes/aplogo/aplogo.component';
-import { BannerComponent } from './componentes/banner/banner.component';
+
 import { SobremiComponent } from './componentes/sobremi/sobremi.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
@@ -26,6 +26,10 @@ import { EditSkillsComponent } from './componentes/skills/edit-skills.component'
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditpersonaComponent } from './componentes/sobremi/editpersona.component';
+import { EditbannerComponent } from './componentes/aplogo/editbanner.component';
+import { NewredComponent } from './componentes/aplogo/newred.component';
+import { EditredComponent } from './componentes/aplogo/editred.component';
+
 
 
 
@@ -34,7 +38,7 @@ import { EditpersonaComponent } from './componentes/sobremi/editpersona.componen
     AppComponent,
     HeaderComponent,
     AplogoComponent,
-    BannerComponent,
+  
     SobremiComponent,
     ExperienciaComponent,
     EducacionComponent,
@@ -49,7 +53,11 @@ import { EditpersonaComponent } from './componentes/sobremi/editpersona.componen
     EditSkillsComponent,
     EditProyectoComponent,
     NewProyectoComponent,
-    EditpersonaComponent
+    EditpersonaComponent,
+    EditbannerComponent,
+    NewredComponent,
+    EditredComponent,
+   
   
    
   ],

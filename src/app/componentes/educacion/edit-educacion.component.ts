@@ -22,7 +22,6 @@ export class EditEducacionComponent implements OnInit {
       },err=>{
         Swal.fire({
           icon: 'error',
-
           text: 'Error al modificar Educacion!',
 
         })

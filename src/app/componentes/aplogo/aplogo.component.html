@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(17, 148, 235);;">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(17, 148, 235);">
   <div class="container-fluid">
     <a class="navbar-brand" href="#home"><img src="../../../assets/APLogo.png" alt="logoap" id="logoap"></a>
     <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="ontoggle()">
@@ -30,18 +30,42 @@
 
     </div>
     <div class="redes">
+      <button type="button" class="btn btn-warning boton" routerLink="/nuevared" *ngIf="isLogged">Nueva
+        Red</button>
       <button type="button" class="btn btn-outline-light" (click)="openModal()" *ngIf="!isLogged">INGRESO</button>
-      <button type="button" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged" >CERRAR SESION</button>
-      <img src="../../../assets/github.png">
-      <img src="../../../assets/linkedin.png">
+      <button type="button" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+
     </div>
+
+    <div class="contenedor" *ngFor="let redes of red">
+      <div class="imgRedes">
+        <a href="{{redes.linkRed}}"><img [src]="redes.imgRed"></a>
+
+      </div>
+
+
+      <div class="edicion" *ngIf="isLogged">
+        <a routerLink="/editred/{{redes.id}}"><i class="bi bi-pencil-fill"></i></a>
+        <a (click)="delete(redes.id)"><i class="bi bi-trash3"></i></a>
+      </div>
+
+    </div>
+
+
+
   </div>
+
+
 </nav>
 
 
 
+
+
+
+
 <!--ventana modal de loguin-->
-<div class="modal fade" id="staticBackdrop" >
+<div class="modal fade" id="staticBackdrop">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -52,21 +76,21 @@
         <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
           <div class="col-12 ">
             <label for="nombreUsuario" class="form-label">USUARIO</label>
-            <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+            <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
+              required>
 
           </div>
           <div class="col-12 ">
             <label for="password" class="form-label">CONTRASEÑA</label>
-            <input type="password" class="form-control" id="password" 
-            [(ngModel)]="password" name="password"required>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
           </div>
 
-            <div class="modal-footer">
+          <div class="modal-footer">
 
-              <button type="button" class="btn btn-primary" (click)="onLogin()" >INGRESAR</button>
-              
-              
-            </div>
+            <button type="button" class="btn btn-primary" (click)="onLogin()">INGRESAR</button>
+
+
+          </div>
         </form>
         ...
       </div>
@@ -74,8 +98,3 @@
     </div>
   </div>
 </div>
-
-<div class="banner">
-  <img src="../../../assets/baneertecno.jpg"class="img-fluid">
-</div>
-

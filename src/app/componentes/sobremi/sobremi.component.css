@@ -4,6 +4,26 @@
     
    
 }
+
+.banner img{
+    width: 100vw;
+    height: 50vh;
+
+}
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-color: #032546;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 150px;
+    right: 40px;
+  }
 .boton{
     margin-bottom: 2rem;
     font-size: 20px;
@@ -21,8 +41,9 @@
 #fotodeperfil{
     position: absolute;
     box-shadow: 10px 10px  15px #545050;
-    width: 300px;
-    top:380px;
+    width: 200px;
+    top: 200px;
+    left: 100px;
     border-radius: 90%;
     
    
@@ -39,18 +60,8 @@
 }
 
 
-@media (min-width:575px){
-    #fotodeperfil{
-        
-        position: absolute;
-        top:500px;
-      
-        
-    }
 
-}
-
-@media (min-width:700px){
+@media (min-width:px){
     #fotodeperfil{
         
         
@@ -60,28 +71,28 @@
     }
 
 }
-@media (min-width:900px){
+@media (min-width:px){
     #fotodeperfil{
         
-        position: absolute;
+       
         top:700px
         
     }
 
 }
-@media (min-width:1200px){
+@media (min-width:px){
     #fotodeperfil{
         
-        position: absolute;
+      
         top:100px
         
     }
 
 }
-@media (min-width:1300px){
+@media (min-width:px){
     #fotodeperfil{
         
-        position: absolute;
+       
         top:200px
         
     }
@@ -91,17 +102,17 @@
 @media (min-width:1500px){
     #fotodeperfil{
         
-        position: absolute;
+      
         top:300px
         
     }
 
 }
 
-@media (min-width:1600px){
+@media (min-width:px){
     #fotodeperfil{
         
-        position: absolute;
+        
         top:500px
         
     }

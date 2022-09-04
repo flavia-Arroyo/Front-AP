@@ -1,8 +1,12 @@
 
 import { Component, OnInit } from '@angular/core';
 import { LoginUsuario } from 'src/app/model/login-usuario';
+import { Redes } from 'src/app/model/redes';
 import { AuthService } from 'src/app/service/auth.service';
+import { RedesService } from 'src/app/service/redes.service';
 import { TokenService } from 'src/app/service/token.service';
+
+import Swal from 'sweetalert2';
 //ventana modal
 declare var window: any;
 
@@ -17,8 +21,14 @@ declare var window: any;
 })
 export class AplogoComponent implements OnInit {
   toggle: boolean = true;
-  title = 'ang13-bootstrap5-modal-demo';
+ 
   formModal: any;
+
+  red: Redes[] = [];
+
+  imgRed:string='';
+  linkRed:string='';
+ 
   
 
 
@@ -30,12 +40,14 @@ export class AplogoComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
 
+  
 
 
 
 
 
-  constructor(private tokenService: TokenService, private authService: AuthService) { }
+
+  constructor(private tokenService: TokenService, private authService: AuthService,private sRedes:RedesService) { }
 
   ngOnInit(): void {
     this.formModal = new window.bootstrap.Modal(
@@ -51,6 +63,26 @@ export class AplogoComponent implements OnInit {
     }else{
       this.isLogged=false;
     }
+
+    this.cargarRedes()
+      if(this.tokenService.getToken()){
+        this.isLogged=true;
+      } else{
+        this.isLogged=false;
+      }
+    
+
+
+
+  }
+
+
+  cargarRedes():void{
+    this.sRedes.lista().subscribe(data=>{
+      this.red=data;
+      console.log(data)
+
+    })
   }
 
   onLogOut():void{
@@ -61,12 +93,11 @@ export class AplogoComponent implements OnInit {
 
 
   onLogin(): void {
-    /*var dato;*/
+   
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     
     this.authService.login(this.loginUsuario).subscribe(data =>{ 
-      /*this.formModal.hide()
-      dato = data*/
+      
       
       this.isLogged = true;     
       this.isLogginFail = false;
@@ -83,7 +114,7 @@ export class AplogoComponent implements OnInit {
       console.log(this.errMsj)
     })
   }
-  /*console.log(dato)*/
+ 
     
  
  
@@ -99,6 +130,37 @@ ontoggle(){
 }
 openModal(){
   this.formModal.show();
+}
+
+delete(id?: number) {
+
+  if (id != undefined) {
+    Swal.fire({
+      title: 'Esta Seguro',
+      text: 'Esta accion es irreversible',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: "SI, BORRAR"
+    }).then(result => {
+      if (result.value) {
+        this.sRedes.delete(id).subscribe(
+          data => {
+            this.cargarRedes();
+            Swal.fire('BORRADO', 'Red Eliminada', 'success')
+          }, err => {
+            Swal.fire({
+              icon: 'error',
+              
+              text: 'No se pudo borrar la experiencia!',
+              
+            })
+           
+          } )    
+        }
+    })
+  }
 }
 
 
