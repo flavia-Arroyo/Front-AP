@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./editpersona.component.css']
 })
 export class EditpersonaComponent implements OnInit {
-  Persona: persona = new persona("","","","","","");
+  Persona: persona = new persona("","","","","","","");
   
 
 

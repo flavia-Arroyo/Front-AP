@@ -30,6 +30,11 @@
             <label for="sobremi">SECCION SOBRE MI </label>
             <textarea type="text" class="form-control" id="sobremi" name="sobremi" [(ngModel)]="Persona.sobremi" required></textarea>
           </div>
+          <div class="form-group">
+            <label for="banner">URL IMAGEN BANNER PAGINA </label>
+            <textarea type="text" class="form-control" id="banner" name="banner" [(ngModel)]="Persona.banner" required=""></textarea>
+          </div>
+
   
           <button class="btn btn-success" (click)="onUpdate()">
             EDITAR

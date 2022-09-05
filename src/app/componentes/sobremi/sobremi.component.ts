@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./sobremi.component.css']
 })
 export class SobremiComponent implements OnInit {
-  persona: persona = new persona("","","","","","");
+  persona: persona = new persona("","","","","","","");
  
  
 
