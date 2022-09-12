@@ -1,5 +1,5 @@
 
-<div class="banner container-fluid">
+<div class="banner">
         
     <img [src]="persona.banner" class="img-fluid">
 
@@ -11,8 +11,9 @@
     
 
     <div class="row persona">
-        <div class="col-8">
-            <button type="button text-center" class="col-4 btn btn-warning boton" *ngIf="isLogged"
+      
+        <div class="row row-cols-3 justify-content-center">            
+            <button type="button text-center" class="btn btn-warning boton" *ngIf="isLogged"
                 routerLink="/editper/{{persona.id}}"><i class="bi bi-pencil-fill"></i>EDITAR PERSONA</button>
         </div>
 
@@ -31,7 +32,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-8 p-5 text-center " id="sobremip">
+        <div class="col-12  text-center " id="sobremip">
             <p class=" fs-1 fw-bold">Sobre Mi</p>
             <h3 class=" fs-5 text-center ">{{persona.sobremi}}</h3>
 

@@ -7,8 +7,8 @@
 }
 
 .edicion{
-    position: absolute;
-    top:0;
+    
+    top:-25px;
 }
 .edicion a{
     color:black;
@@ -20,7 +20,9 @@
 }
 .contenedor{
     margin-right: 10px;
+    height: 50px;
     margin-left: 10px;
+    position: relative;
 }
 
 

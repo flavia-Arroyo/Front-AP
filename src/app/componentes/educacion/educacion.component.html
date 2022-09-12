@@ -7,8 +7,8 @@
   <a type="button" class="btn btn-warning boton"   routerLink="/nuevaedu" *ngIf="isLogged">Nueva
     Educacion</a>
   
-    <div class="row g-2">
-      <div class="col-12 col-md-6 col-lg-4 borde"  *ngFor="let Educacion of edu">
+    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+      <div class="col borde"  *ngFor="let Educacion of edu">
 
         <div class="edicion" *ngIf="isLogged">
           <button class="editar btn mx-2" routerLink="/editedu/{{Educacion.id}}"  ><i class="bi bi-pencil-fill"></i></button>
@@ -18,8 +18,8 @@
         <img [src]="Educacion.imgE" class="card-img-top" id="img" alt="...">
         <div class="card-body">
           <h5 class="fs-4 text-center fw-bold">{{Educacion.institucionE}}-{{Educacion.anioE}}</h5>
-          <p class="card-text">{{Educacion.tituloE}}s</p>
-          <p class="card-text">{{Educacion.condicionE}}s</p>
+          <p class="card-text">{{Educacion.tituloE}}</p>
+          <p class="card-text">{{Educacion.condicionE}}</p>
 
         </div>
       </div>
