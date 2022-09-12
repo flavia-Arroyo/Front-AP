@@ -26,7 +26,7 @@ import { EditSkillsComponent } from './componentes/skills/edit-skills.component'
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditpersonaComponent } from './componentes/sobremi/editpersona.component';
-import { EditbannerComponent } from './componentes/aplogo/editbanner.component';
+
 import { NewredComponent } from './componentes/aplogo/newred.component';
 import { EditredComponent } from './componentes/aplogo/editred.component';
 
@@ -37,8 +37,7 @@ import { EditredComponent } from './componentes/aplogo/editred.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    AplogoComponent,
-  
+    AplogoComponent,  
     SobremiComponent,
     ExperienciaComponent,
     EducacionComponent,
@@ -54,7 +53,7 @@ import { EditredComponent } from './componentes/aplogo/editred.component';
     EditProyectoComponent,
     NewProyectoComponent,
     EditpersonaComponent,
-    EditbannerComponent,
+    
     NewredComponent,
     EditredComponent,
    
