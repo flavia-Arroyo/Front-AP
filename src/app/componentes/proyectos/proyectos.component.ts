@@ -45,7 +45,7 @@ export class ProyectosComponent implements OnInit {
           this.sProyecto.delete(id).subscribe(
             data => {
               this.cargarProyecto();
-              Swal.fire('BORRADO', 'Proyecto ha sido eliminada', 'success')
+              Swal.fire('BORRADO', 'El proyecto ha sido eliminado', 'success')
             }, err => {
               Swal.fire({
                 icon: 'error',

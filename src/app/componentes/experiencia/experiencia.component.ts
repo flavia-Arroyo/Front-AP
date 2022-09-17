@@ -107,7 +107,7 @@ export class ExperienciaComponent implements OnInit {
           
           position: 'center',
           icon: 'success',
-          title: 'Experiencia añadida',
+          title: 'Experiencia Laboral añadida',
           showConfirmButton: false,
           timer: 1500
           

@@ -43,7 +43,7 @@ export class EditExperienciaComponent implements OnInit {
 
           position: 'center',
           icon: 'success',
-          title: 'Educacion actualizada',
+          title: 'Experiencia laboral actualizada',
           showConfirmButton: false,
           timer: 1500,
           

@@ -24,7 +24,7 @@ export class EditSkillsComponent implements OnInit {
         Swal.fire({
           icon: 'error',
 
-          text: 'Error al modificar Educacion!',
+          text: 'Se produzco un error!',
 
         })
         this.router.navigate([''])

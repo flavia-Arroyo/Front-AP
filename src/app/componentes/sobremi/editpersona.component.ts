@@ -62,7 +62,7 @@ export class EditpersonaComponent implements OnInit {
         Swal.fire({
           icon: 'error',
 
-          text: 'Error al modificar la persona!',
+          text: 'Error al modificar los datos de la persona!',
 
         })
         this.router.navigate([''])

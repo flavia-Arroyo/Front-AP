@@ -43,7 +43,7 @@ export class NewProyectoComponent implements OnInit {
         Swal.fire({
           icon: 'error',
 
-          text: 'No se pudo añadir el proyecro!',
+          text: 'No se pudo añadir el proyecto!',
 
         })
         this.router.navigate(['']);
