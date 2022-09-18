@@ -16,6 +16,7 @@
 .boton{
     margin-bottom: 2rem;
     font-size: 20px;
+    width: 70%;
     font-weight: bold;
     padding: 1rem;
 }
@@ -31,7 +32,7 @@
     position: absolute;
     box-shadow: 10px 10px  15px #545050;
     width: 200px;
-    top: 550px;
+    top: 570px;
     left: 70px;
     border-radius: 90%;
     
@@ -60,5 +61,13 @@
         top:450px;
 
     }
+}
+
+@media (min-width:800px){
+    .boton{
+        width: unset;
+    }
+
+
 }
    
