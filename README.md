@@ -51,8 +51,7 @@ se utilizo para su desarrollo
 
 con el back-end se diseño el DER(diseño conceptual), Modelo Relacional (diseño logico) y el diseño fisico para la creacion de la base de datos en MYSQL la estructura necesaria y se conecto esta usando API de java persistencia (JPA)
 
-## login
-se aplico en el back jwt con Spring Boot y Angular
+
 
 ## deploy
 se realizo el deploy del back end en heroku y el front a firebase, lo que brinda url que permite acceder via online a las mismas partes del codigo
