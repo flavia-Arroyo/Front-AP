@@ -3,12 +3,12 @@
 En este proyecto contiene tiene dos secciones una de **front-end** y otra **back-end**
 ## Front-End
 Se utilizaron los siguientes framework y lenguajes
-![This is an image](https://i.ibb.co/2ZVcbsc/boostrap.jpg)
-![This is an image](https://i.ibb.co/VSY1ZSS/html.png)
-![This is an image](https://i.ibb.co/PrJBDz2/CSS.png)
-![This is an image](https://i.ibb.co/0Gb8jNQ/angular.png)
-![This is an image](https://i.ibb.co/RD1FcTJ/typescript.png)
-![This is an image](https://sweetalert2.github.io/images/SweetAlert2.png)
+![This is an boostrap](https://i.ibb.co/2ZVcbsc/boostrap.jpg)
+![This is an html](https://i.ibb.co/VSY1ZSS/html.png)
+![This is an css](https://i.ibb.co/PrJBDz2/CSS.png)
+![This is an angular](https://i.ibb.co/0Gb8jNQ/angular.png)
+![This is an typescript](https://i.ibb.co/RD1FcTJ/typescript.png)
+![This is an sweetalert2](https://sweetalert2.github.io/images/SweetAlert2.png)
 
  
 
