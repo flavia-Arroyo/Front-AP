@@ -15,7 +15,8 @@ Se utilizaron los siguientes framework y lenguajes:
 
 se desarrollo un portfolio responsivo, totalmente editable por lo que el que lo visite si se loguea con el usuario y contraseña correcta puede editar el porfolio 
 virtual y personalizarlo desde el banner y todas las secciones que cuenta. 
-Cuenta con las siguientes secciones, las cuales una vez logueados se puede editar modificar o eliminar los datos que estan incorporados en la misma:
+# Secciones
+## al estar logueados se puede editar modificar o eliminar los datos que estan incorporados en la misma:
 
 1.Redes Sociales: Se incorporan las redes sociales que la persona quiere exponer para ser contactado por quienes visiten su portfolio web
 
@@ -31,12 +32,12 @@ el que se desempeño
 6.Proyectos: se incluye proyectos  web  que haya desarrollado la persona, donde se observa titulo breve descripcion e imagen del mismo, tambien se incluye botones donde  se puede ir a la pagina del mismo y al repositorio para poder ser observado en detalle 
 
 # imagenes del Portfolio web sin editar 
-!(https://i.ibb.co/L65pss9/pantalla-movil.png)
-!(https://i.ibb.co/KrSxQ4Z/portfolio-gramde.png)
+![This is an portfolio movil](https://i.ibb.co/L65pss9/pantalla-movil.png)
+![This is an portfolio pantalla grande](https://i.ibb.co/KrSxQ4Z/portfolio-gramde.png)
 
 # imagen del Portfolio editable
-!(https://i.ibb.co/dLdhmbT/pantalla-editable.png)
-!(https://i.ibb.co/HPxpyVb/portfolio-grande-editable.png)
+![This is an imagen editable](https://i.ibb.co/dLdhmbT/pantalla-editable.png)
+![This is an editable grande](https://i.ibb.co/HPxpyVb/portfolio-grande-editable.png)
 
 
 
