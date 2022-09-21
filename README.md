@@ -13,10 +13,9 @@ Se utilizaron los siguientes framework y lenguajes:
 
  
 
-se desarrollo un portfolio responsivo, totalmente editable por lo que el que lo visite si se loguea con el usuario y contraseña correcta puede editar el porfolio 
-virtual y personalizarlo desde el banner y todas las secciones que cuenta. 
+### he desarrollado un portfolio responsivo, totalmente editable, por lo que el que lo visite si se loguea con el usuario y contraseña correcta puede editar el porfolio virtual y personalizarlo con sus datos personales. 
 # Secciones
-## al estar logueados se puede editar modificar o eliminar los datos que estan incorporados en la misma:
+## El porfolio cuenta con las siguientes secciones:
 
 1.Redes Sociales: Se incorporan las redes sociales que la persona quiere exponer para ser contactado por quienes visiten su portfolio web
 
